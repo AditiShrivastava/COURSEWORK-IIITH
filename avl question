@@ -1,0 +1,50 @@
+Create an AVL tree with functions for searching if an element exists in it, finding Kth smallest element, inserting an element and deleting an element.
+
+Your tree should not contain duplicates
+
+First you need to insert given N integers in your tree and then you need to answer M queries of format : Q X, where Q and X are integers
+
+if Q is equal to 1 then you need to insert X in your tree. if Q is equal to 2 then you need to find if X exists in the tree, if it does then print 1 else 0. If Q is equal to 3 then you need to print Xth smallest element in the tree and then delete it from the tree.
+
+Input Format
+
+First line contains 2 integers N and M
+
+Second line contains N integers which you need to insert in the tree in the beginning.
+
+Following M line contains M queries of format Q X
+
+Constraints
+
+1 <= N <= 5 x 10^5
+
+1 <= M <= 10^5
+
+Output Format
+
+print results of all the queries with id 2 and 3 in newline
+
+Sample Input 0
+
+10 10
+14 10 19 8 4 7 18 13 5 1 
+2 4
+1 16
+3 9
+3 6
+3 5
+1 19
+1 15
+1 2
+2 16
+3 1
+
+Sample Output 0
+
+1
+16
+10
+8
+0
+1
+
