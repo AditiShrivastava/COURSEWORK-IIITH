@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int t,n,x;
+	cin>>t;
+	while(t--)
+	{
+	    cin>>n;
+	    cout<<" n is"<<n;
+	    int arr[n+1]={0};
+	    for(int i=1;i<=n;i++)
+	    {
+	        cin>>x;
+	        arr[x]=1;
+	        
+	    }
+	       for(int i=1;i<=n;i++)
+	    {
+	        cout<<" "<<arr[i];
+	        
+	    }
+	    int i;
+	    for(i=1;i<=n;i++)
+	    {
+	        if(arr[i]==0)
+	        break;
+	    }
+	    cout<<" "<<i;
+	    cout<<"test "<<t<<"ends"<<endl;
+	}
+	return 0;
+}
+
