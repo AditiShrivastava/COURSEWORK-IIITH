@@ -1,4 +1,8 @@
-#include<bits/stdc++>
+#include<bits/stdc++.h>
+#include<string>
+using namespace std;
+
+
 struct node
 {
 	node * alpha[26];
@@ -46,7 +50,7 @@ struct Trie
 				{	
 					return false;
 				}
-			return searchutil(n->alpha[s[i]-'a'],s, i+1));
+			return searchutil(n->alpha[s[i]-'a'],s, i+1);
 		}
 		else
 		{
