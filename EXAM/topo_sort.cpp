@@ -37,6 +37,33 @@ public:
 		}
 	}
 	
+	void DFSutil(int v,bool visited[])
+	{
+		visited[v]=true;
+		cout<<v<<" ,";
+		for(auto itr=l[v].begin();itr!=l[v].end();++itr)
+		{
+			if(visited[*itr]==false)
+			{
+				DFSutil(*itr,visited);
+
+			}
+		}
+	}
+
+	void DFS(int u)
+	{
+		bool* visited=new bool[V];
+		for(int i=0;i<V;++i)
+		{
+			visited[i]=false;
+		}
+		DFSutil(u,visited);
+
+
+	}
+
+
 
 	void Topo_sort_util(int v,bool visited[],stack<int> &Stack)
 	{

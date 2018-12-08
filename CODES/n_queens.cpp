@@ -1,10 +1,9 @@
-//#include <cmath>
-// #include <cstdio>
-// #include <vector>
+#include <cmath>
+#include <cstdio>
+#include <vector>
 #include <iostream>
-#include<string.h>
-// #include <algorithm>
-// #include <bits/stdc++.h>
+#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 int n;
 int arr[16][16];//Creating an array which is representing chess-board(max size is 15*15).

@@ -1,6 +1,5 @@
-#include<iostream>
-#include <list>
-#include <stack>
+#include<stdio.h>
+#include<bits/stdc++.h>
 using namespace std;
 class Graph
 {
@@ -34,6 +33,32 @@ public:
 		}
 		cout<<endl;
 		}
+	}
+	
+	void DFSutil(int v,bool visited[])
+	{
+		visited[v]=true;
+		cout<<v<<" ,";
+		for(auto itr=l[v].begin();itr!=l[v].end();++itr)
+		{
+			if(visited[*itr]==false)
+			{
+				DFSutil(*itr,visited);
+
+			}
+		}
+	}
+
+	void DFS(int u)
+	{
+		bool* visited=new bool[V];
+		for(int i=0;i<V;++i)
+		{
+			visited[i]=false;
+		}
+		DFSutil(u,visited);
+
+
 	}
 
 	// For reverse graph
@@ -122,39 +147,28 @@ public:
 };
 int main()
 {
-	// int v;
-	// v=11;
-	// Graph g(v);
-	// g.addEdge(0,1); 
-	// g.addEdge(1,2); 
-	// g.addEdge(2,0); 
-	// g.addEdge(1,3); 
-	// g.addEdge(3, 4); 
-	// g.addEdge(5,3); 
-	// g.addEdge(4,5);
-	// g.addEdge(6,5);
-	// g.addEdge(6,7);
-	// g.addEdge(9,6);
-	// g.addEdge(7,8); 
-	// g.addEdge(8,9);
-	// g.addEdge(9,10);      
-	// g.showGraph();
-	// cout<<"****************************";
+	int v;
+	v=11;
+	Graph g(v);
+	g.addEdge(0,1); 
+	g.addEdge(1,2); 
+	g.addEdge(2,0); 
+	g.addEdge(1,3); 
+	g.addEdge(3, 4); 
+	g.addEdge(5,3); 
+	g.addEdge(4,5);
+	g.addEdge(6,5);
+	g.addEdge(6,7);
+	g.addEdge(9,6);
+	g.addEdge(7,8); 
+	g.addEdge(8,9);
+	g.addEdge(9,10);      
+	g.showGraph();
+	cout<<"****************************";
 	//g.showGraphReverse();
-
-	Graph g(5); 
-    g.addEdge(1, 0); 
-    g.addEdge(0, 2); 
-    g.addEdge(2, 1); 
-    g.addEdge(0, 3); 
-    g.addEdge(3, 4); 
-  
-    cout << "Following are strongly connected components in "
-            "given graph \n"; 
-
 	cout<<" "<<"\n";
-	g.printSCC();
-	//g.DFS(9);
+	//g.printSCC();
+	g.DFS(9);
 	return 0;
 
 
